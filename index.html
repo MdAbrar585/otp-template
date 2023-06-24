@@ -5,140 +5,120 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Invoice</title>
 
-
-  <!-- <style>
-    /* Style for the email signature */
+  <style>
     body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
+      font-family: Arial, sans-serif;
     }
 
-    .email-signature {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        background-color: #f9f9f9;
+    .invoice-container {
+      margin: 50px auto;
+      width: 70%;
+      padding: 20px 0;
     }
 
-    .logo {
-        float: left;
-        margin-right: 20px;
+    .invoice-header {
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      padding-bottom: 20px;
     }
 
-    .logo img {
-        max-width: 100px;
-        height: auto;
+    .invoice-header img {
+      width: 250px;
     }
 
-    .content {
-        overflow: hidden; /* Clear the float */
+    .invoice-details {
+      margin-top: 40px;
+      font-size: 1.1em;
+      text-align: justify;
     }
 
-    .name {
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 5px;
+    .invoice-table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
     }
 
-    .title {
-        font-size: 14px;
-        color: #888;
-        margin-bottom: 10px;
+    .invoice-table th,
+    .invoice-table td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
     }
 
-    .contact {
-        margin-bottom: 10px;
+    .invoice-footer {
+      margin-top: 40px;
+      text-align: justify;
     }
 
-    .contact p {
-        margin: 0;
-        line-height: 1.5;
+    .invoice-footer p {
+      margin: 0;
     }
-  </style> -->
+
+    .invoice-signature {
+      float: right;
+      padding: 8px 0;
+      color: #aaa;
+      font-size: 0.8em;
+      line-height: 1;
+      font-weight: 300;
+    }
+
+    .invoice-signature p {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .invoice-signature a {
+      color: black;
+    }
+  </style>
 </head>
 
 <body>
-  <div style="font-family: Helvetica,Arial,sans-serif;min-width:auto;overflow:auto;line-height:2">
-    <div style="margin:50px auto;width:70%;padding:20px 0">
-      <div style="border-bottom:1px solid #eee; text-align: center;">
-        <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">
-          <img style="width: 250px;" src="https://i.ibb.co/kXHZqrY/carratt24-rmv-bg.gif" alt="">
-        </a>
-      </div>
-      <!-- <p style="font-size:1.1em;margin: 40px 0px;"> <b>Subject:</b> Important CARRAT24 Trading Activity Update </p> -->
+  <div class="invoice-container">
+    <div class="invoice-header">
+      <img src="https://i.ibb.co/kXHZqrY/carratt24-rmv-bg.gif" alt="Logo">
+    </div>
 
-      <p style="font-size:1.1em">Dear [Customer's Name],</p>
-      <p style="text-align: justify;">We are writing to inform you about a recent update regarding your deposit/withdraw
-        /shipments/selling/ Conversion requests on Carrat24.</p>
+    <div class="invoice-details">
+      <h2>Invoice</h2>
+      <p>Customer Name: [Customer's Name]</p>
+      <p>Date: [Invoice Date]</p>
 
-      <!-- <h5 style="width: max-content;">
-        Activity Type: [Activity Type] </h5>
-      <h5 style="width: max-content;">
-        Activity Date: [Activity Date] </h5>
-      <h5 style="width: max-content;">
-        Reference Number: [Reference Number] </h5>
-      <h5 style="width: max-content;">
-        Activity Type: [Activity Type] </h5>
-      <h5 style="width: max-content;">
-        Trading Order ID: [Order ID] </h5>
-      <h5 style="width: max-content;">
-        Status: [Status] </h5> -->
-
-
-      <table style="font-family: Arial, sans-serif; border-collapse: collapse; width: 100%;">
+      <table class="invoice-table">
         <tr>
-          <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Activity Type</th>
-          <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Activity Date</th>
-          <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Reference Number</th>
-          <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Trading Order ID</th>
-          <th style="border: 1px solid #dddddd; text-align: left; padding: 8px;">Status</th>
+          <th>Item Description</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Total</th>
         </tr>
+        <!-- Example row -->
         <tr>
-          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">[Activity Type]</td>
-          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">[Activity Date]</td>
-          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">[Reference Number]</td>
-          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">[Order ID]</td>
-          <td style="border: 1px solid #dddddd; text-align: left; padding: 8px;">[Status]</td>
+          <td>[Item Description]</td>
+          <td>[Quantity]</td>
+          <td>[Unit Price]</td>
+          <td>[Total]</td>
         </tr>
       </table>
 
-      <p style="text-align: justify;">If you have any questions or require further assistance, please feel free to
-        contact our support team at <span style="font-weight: 700;">+971 50 6012151.</span>  We are here to help.</p>
+      <p>Total Amount: [Total Amount]</p>
+    </div>
 
+    <div class="invoice-footer">
+      <p>If you have any questions or require further assistance, please feel free to contact our support team at <span style="font-weight: 700;">+971 50 6012151.</span> We are here to help.</p>
+      <p>Thank you for choosing CARRAT24. We value your business and remain committed to providing you with a seamless trading experience.</p>
+    </div>
 
+    <hr style="border:none;border-top:1px solid #eee" />
 
-      <p style="margin: 40px 0px;text-align: justify;">Thank you for choosing CARRAT24. We value your business and
-        remain committed to providing you with a seamless trading experience.</p>
-
-
-
-      <!-- <p style="font-size:0.9em;">Regards,<br />Carrat 24</p> -->
-      <hr style="border:none;border-top:1px solid #eee" />
-      <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
-        <p style="font-weight: 700;font-size: 14px;">Sincerely,</p>
-        <p style="font-weight: 900; font-size: 14px; color: black;">CARRAT24 TEAM
-        </p>
-        <a href="#">WWW.CARRAT24.COM</a>
-        <!-- <p>California</p> -->
-      </div>
-      <!-- <div class="email-signature">
-        <div class="logo">
-            <img style="width: 100px;" src="https://i.ibb.co/GMwBr7K/Carratt24-01.png" alt="Company Logo">
-        </div>
-        <div class="content">
-            <div class="name">John Doe</div>
-            <div class="title">Graphic Designer</div>
-            <div class="contact">
-                <p>Email: john.doe@example.com</p>
-                <p>Phone: +1 123-456-7890</p>
-                <p>Website: www.example.com</p>
-            </div>
-        </div>
-    </div> -->
+    <div class="invoice-signature">
+      <p>Sincerely,</p>
+      <p style="font-weight: 900; font-size: 14px; color: black;">CARRAT24 TEAM</p>
+      <a href="#">WWW.CARRAT24.COM</a>
     </div>
   </div>
 </body>
