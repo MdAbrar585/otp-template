@@ -77,6 +77,32 @@
     .invoice-signature a {
       color: black;
     }
+
+    /* Responsive styles */
+    @media only screen and (max-width: 768px) {
+      .invoice-container {
+        width: 90%;
+      }
+
+      .invoice-header img {
+        width: 200px;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      .invoice-container {
+        width: 95%;
+      }
+
+      .invoice-details,
+      .invoice-footer {
+        font-size: 1em;
+      }
+
+      .invoice-signature p {
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 
